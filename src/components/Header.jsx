@@ -11,8 +11,8 @@ const Header = ({ handleSubmit }) => {
   }
 
   function sendData(e) {
-    handleSubmit(title);
     e.preventDefault();
+    handleSubmit(title);
     setOpen(false);
     setTitle("");
   }

@@ -9,8 +9,8 @@ function App() {
     if (data !== null) {
       localStorage.setItem("data", JSON.stringify(data));
     } else if (
-      data === null &&
-      localStorage.getItem("data") !== "null" &&
+      data === null ||
+      (data === [] && localStorage.getItem("data") !== "null") ||
       localStorage.getItem("data") !== "[]"
     ) {
       setData(JSON.parse(localStorage.getItem("data")));
@@ -18,7 +18,7 @@ function App() {
   }, [data]);
 
   function handleSubmit(title) {
-    if (!data) {
+    if (!data || data.length === 0) {
       setData([
         {
           id: 1,
