@@ -14,4 +14,4 @@ Como característica extra se implementó el uso de **localStorage** para la per
 
 ## Deploy
 
-La aplicación se puede encontrar funcional en el siguiente link: [To Do](https://to-do.federicomiranda.now.sh/)
+La aplicación se puede encontrar funcional en el siguiente link: <a href="https://to-do.federicomiranda.now.sh/" target="_blank">To Do</a>
