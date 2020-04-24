@@ -1,0 +1,36 @@
+.Header {
+  padding: 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.Header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Header-title {
+  font-size: 1.5rem;
+}
+
+.Header-button {
+  font-size: 2rem;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .Header-wrapper {
+    max-width: 720px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .Header-wrapper {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+
+* {
+  font-family: "Major Mono Display", monospace;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .Main-wrapper {
+    max-width: 720px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .Main-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

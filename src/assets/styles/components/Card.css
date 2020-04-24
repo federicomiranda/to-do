@@ -1,0 +1,46 @@
+.Card {
+  width: 90%;
+  margin: 1rem auto;
+  background: #f1f1f1;
+  color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.Card-title {
+  font-weight: bold;
+}
+
+.Card-complete {
+  color: rgb(33, 117, 212);
+  font-size: 1.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .Card {
+    width: 30%;
+    margin: 1rem 5% 1rem 0;
+  }
+  .Card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .Card {
+    width: 23%;
+    margin: 1rem 2.66% 1rem 0;
+  }
+  .Card:nth-child(3n) {
+    margin-right: 2.66%;
+  }
+  .Card:nth-child(4n) {
+    margin-right: 0;
+  }
+}
