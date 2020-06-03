@@ -3,22 +3,20 @@ import Header from "./components/Header";
 import Card from "./components/Card";
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(JSON.parse(localStorage.getItem("data")) || []);
+
+  const noHayData = !JSON.parse(localStorage.getItem("data"));
 
   useEffect(() => {
-    if (data !== null) {
-      localStorage.setItem("data", JSON.stringify(data));
-    } else if (
-      data === null ||
-      (data === [] && localStorage.getItem("data") !== "null") ||
-      localStorage.getItem("data") !== "[]"
-    ) {
+    if (noHayData) {
       setData(JSON.parse(localStorage.getItem("data")));
+    } else {
+      localStorage.setItem("data", JSON.stringify(data));
     }
-  }, [data]);
+  }, [data, noHayData]);
 
   function handleSubmit(title) {
-    if (!data || data.length === 0) {
+    if (data.length === 0) {
       setData([
         {
           id: 1,
